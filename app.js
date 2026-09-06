@@ -1,6 +1,6 @@
 const data = {
   entradas: {
-    feature: {name:"Sampler", price:350, desc:"200 gr de boneless bañados en tu salsa favorita, 300 gr de alitas, 3 pzas de dedos de queso, 400 gr de papas y vegetales.", image:"assets/entradas.jpg"},
+    feature: {name:"Sampler", price:350, desc:"200 gr de boneless bañados en tu salsa favorita, 300 gr de alitas, 3 pzas de dedos de queso, 400 gr de papas y vegetales.", image:"assets/samples-banner-general.jpg"},
     items:[
       {name:"Dedos de queso",price:90,desc:"5 pzas de dedo de queso, acompañados de salsa pomodoro."},
       {name:"Papas sazonadas",price:90,desc:"Elige tu tipo de papas favoritas: gajo o francesas."},
@@ -12,7 +12,7 @@ const data = {
     ]
   },
   pizzas:{
-    feature:{name:"Arma tu pizza",price:160,desc:"Pizza clásica: 2 ingredientes por $160 o 4 ingredientes por $220. Elige tus ingredientes favoritos.",image:"assets/pizzas.jpg"},
+    feature:{name:"Arma tu pizza",price:160,desc:"Pizza clásica: 2 ingredientes por $160 o 4 ingredientes por $220. Elige tus ingredientes favoritos.",image:"assets/pizza-banner-general.jpg"},
     items:[
       {name:"Pizza norteña",price:270,desc:"Mix de quesos, morrón, cebolla morada, 150 gr de top sirloin, philadelphia y cebollín."},
       {name:"Carnívora",price:260,desc:"Mix de quesos, chorizo, salchicha ahumada, tocino, chorizo argentino y chilorio."},
