@@ -133,7 +133,7 @@ $("#checkoutBtn").onclick=()=>{
         return;
     }
 
-    const telefono = "https://wa.me/6677844277";
+    const telefono = "6677844277";
 
     let mensaje = "🍗 *PEDIDO BONEZZA*%0A%0A";
 
