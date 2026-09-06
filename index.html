@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4d5747">
+  <meta name="description" content="Menú interactivo de Bonezza">
+  <title>Bonezza — Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a class="brand" href="#inicio">BONEZZA</a>
+      <button class="cart-btn" id="openCart" aria-label="Abrir pedido">Pedido <span id="cartCount">0</span></button>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow">Sabor que se comparte</p>
+      <h1>MENÚ</h1>
+      <p>Boneless · Alitas · Pizzas · Pastas · Crepas · Bebidas</p>
+      <a class="cta" href="#menu">VER MENÚ</a>
+    </div>
+  </header>
+
+  <main id="menu">
+    <section class="menu-head">
+      <div>
+        <p class="eyebrow">BONEZZA</p>
+        <h2>ELIGE TU ANTOJO</h2>
+      </div>
+      <p class="hint">Toca cualquier platillo para ver detalles y agregarlo a tu pedido.</p>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Categorías">
+      <button class="tab active" data-category="entradas">Entradas</button>
+      <button class="tab" data-category="pizzas">Pizzas</button>
+      <button class="tab" data-category="pastas">Pastas</button>
+      <button class="tab" data-category="crepas">Crepas</button>
+      <button class="tab" data-category="bebidas">Bebidas</button>
+      <button class="tab" data-category="frappes">Frappes</button>
+    </div>
+
+    <section class="featured" id="featured"></section>
+    <section class="grid" id="products" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <strong>BONEZZA</strong>
+    <span>Menú interactivo · GitHub Pages</span>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Tu pedido">
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow">BONEZZA</p>
+        <h3>Tu pedido</h3>
+      </div>
+      <button class="close" id="closeCart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button class="cta full" id="checkoutBtn">Finalizar pedido</button>
+      <p class="small">Este botón prepara tu pedido. Puedes conectarlo a WhatsApp, una plataforma de delivery o tu backend.</p>
+    </div>
+  </aside>
+  <div class="scrim hidden" id="scrim"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
