@@ -127,5 +127,5 @@ function closeCart(){$("#cartDrawer").classList.remove("open");$("#scrim").class
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{current=t.dataset.category;render();document.getElementById("menu").scrollIntoView({behavior:"smooth"})}));
 $("#closeModal").onclick=closeModal; $("#modalBackdrop").addEventListener("click",e=>{if(e.target.id==="modalBackdrop")closeModal()});
 $("#openCart").onclick=openCart; $("#closeCart").onclick=closeCart; $("#scrim").onclick=closeCart;
-$("#checkoutBtn").onclick=()=>alert(cart.length?"Tu pedido está listo. Conecta este botón con WhatsApp o tu sistema de pedidos para recibirlo.":"Agrega productos antes de finalizar.");
+$("#checkoutBtn").onclick=()=>alert(cart.length?"Tu pedido está listo, nuestros operadores recibiran tu pedido al instante":"Agrega productos antes de finalizar.");
 render(); renderCart();
