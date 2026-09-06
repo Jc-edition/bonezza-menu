@@ -127,35 +127,5 @@ function closeCart(){$("#cartDrawer").classList.remove("open");$("#scrim").class
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{current=t.dataset.category;render();document.getElementById("menu").scrollIntoView({behavior:"smooth"})}));
 $("#closeModal").onclick=closeModal; $("#modalBackdrop").addEventListener("click",e=>{if(e.target.id==="modalBackdrop")closeModal()});
 $("#openCart").onclick=openCart; $("#closeCart").onclick=closeCart; $("#scrim").onclick=closeCart;
-$("#checkoutBtn").onclick=()=>{
-    if(!cart.length){
-        alert("Agrega productos antes de finalizar.");
-        return;
-    }
-
-    const telefono = "6677844277";
-
-    let mensaje = "🍗 *PEDIDO BONEZZA*%0A%0A";
-
-    cart.forEach(item => {
-        mensaje += `${item.qty} × ${item.name}%0A`;
-
-        if(item.opts.length){
-            mensaje += `Opciones: ${item.opts.join(", ")}%0A`;
-        }
-
-        mensaje += `%0A`;
-    });
-
-    const total = cart.reduce(
-        (total,item) => total + item.price * item.qty,
-        0
-    );
-
-    mensaje += `💰 *TOTAL: ${money(total)}*`;
-
-    const url = `https://wa.me/${telefono}?text=${mensaje}`;
-
-    window.open(url, "_blank");
-};
+$("#checkoutBtn").onclick=()=>alert(cart.length?"Tu pedido está listo. Conecta este botón con WhatsApp o tu sistema de pedidos para recibirlo.":"Agrega productos antes de finalizar.");
 render(); renderCart();
