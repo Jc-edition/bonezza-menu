@@ -116,7 +116,7 @@ function addToCart(){
 }
 function renderCart(){
   $("#cartCount").textContent=cart.reduce((a,x)=>a+x.qty,0);
-  $("#cartItems").innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-row"><strong>${x.qty}× ${x.name}</strong><small>${x.opts.join(" · ")||"Sin personalización"}</small><div class="row-bottom"><span>${money(x.price*x.qty)}</span><button class="option" onclick="removeCart(${i})">Quitar</button></div></div>`).join(""):`<div class="empty">Tu pedido está vacío.<br>Agrega algo rico del menú.</div>`;
+  $("#cartItems").innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-row"><strong>${x.qty}× ${x.name}</strong><small>${x.opts.join(" · ")||"Sin personalización"}</small><div class="row-bottom"><span>${money(x.price*x.qty)}</span><button class="option" onclick="removeCart(${i})">Quitar</button></div></div>`).join("526677844277"):`<div class="empty">Tu pedido está vacío.<br>Agrega algo rico del menú.</div>`;
   $("#cartTotal").textContent=money(cart.reduce((a,x)=>a+x.price*x.qty,0));
 }
 function removeCart(i){cart.splice(i,1);renderCart()}
